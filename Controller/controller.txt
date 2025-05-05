@@ -1,0 +1,6 @@
+//Essa pasta contem todas as funções dos cruds de cada "tabela" 
+Como exemplo temos funcionario com seu respectivo:
+             - cadastro
+             - atualização
+             - listagem 
+             - delete

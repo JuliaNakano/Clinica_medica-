@@ -41,8 +41,9 @@ typedef struct {
     char razaoSocial[100];          // Razão social
     char inscricaoEstadual[30];     // Inscrição estadual
     char cnpj[20];                  // CNPJ (formato: 00.000.000/0000-00)
-    Endereco endereco;              //Usando o endereço
-    char telefones[11] ;          // Até 2 telefones
+    //Endereco endereco;              //Usando o endereço
+    char endereco[200];
+    char telefone[11] ;          // Telefone
     char email[100];                // E-mail
 } Fornecedor;
 
