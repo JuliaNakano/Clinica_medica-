@@ -31,7 +31,7 @@ typedef struct {
     char crm[20];                 // CRM ou registro equivalente
     char especialidade[50];       // Especialidade médica
     char cpf[15];                 // CPF (formato: 000.000.000-00)
-    char telefones[2][20];        // Até 2 telefones
+    char telefone[20];        
     char email[100];              // E-mail
 } Psaude;
 

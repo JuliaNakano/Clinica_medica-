@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "../Model/estrutura.h"
+#include "Paciente.h"
 
 /*  
 // Informações do pacientes
@@ -18,7 +19,7 @@ typedef struct {
 
 */
 //Cadastro de pacientes 
-void cradastrarPaciente(Paciente*lista, int*qtd){
+void cradastrarPaciente(Paciente* lista, int*qtd){
 
     printf("=== Cadastro de Paciente ===\n");
 
@@ -50,7 +51,7 @@ void cradastrarPaciente(Paciente*lista, int*qtd){
 }
 
 //Atualizar de pacientes 
-void atualizarPaciente(Paciente*lista, int*qtd){
+void atualizarPaciente(Paciente* lista, int*qtd){
     int codigo;
     printf("Digite o código do paciente que deseja atualizar: ");
     scanf("%d", &codigo);
@@ -131,7 +132,8 @@ void atualizarPaciente(Paciente*lista, int*qtd){
 }
 
 //Listar de pacientes 
-void listarPaciente(Paciente* lista, int qtd) {
+void listarPaciente(Paciente* lista, int* qtd) {
+    
 
     if (qtd == 0) {
         printf("Nenhum paciente cadastrado.\n");
@@ -176,4 +178,7 @@ void excluirPaciente(Paciente* lista, int* qtd, int codigo) {
     } else {
         printf("O Paciente com código %d não foi encontrado!\n", codigo);
     }
+}
+void excluirPaciente(Paciente paciente[], int *qtd, int codigo)
+{
 }
