@@ -172,6 +172,8 @@ void atualizarFornecedor(Fornecedor* lista, int qtd) {
     } while (opcao != 0);
 }
 
+
+
 //Função de listar fornecedor 
 void listarFornecedores(Fornecedor* lista, int qtd) {
     if (qtd == 0) {

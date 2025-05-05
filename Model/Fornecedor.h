@@ -2,7 +2,7 @@
 #ifndef FORNECEDOR_H
 #define FORNECEDOR_H
 
-#include "../Controller/Fornecedor.c"
+#include "../Controller/Paciente.c"
 #include "estrutura.h"
 
 // Dependências necessárias

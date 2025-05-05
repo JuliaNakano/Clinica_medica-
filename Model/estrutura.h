@@ -1,6 +1,8 @@
 //As struct aqui declaradas representam os dados a serem manipualdos em cada "tabela"
 // Julia Cristina Martins de Almeida Nakano
 #include<stdio.h>
+#include <stdlib.h>
+
 
 //Informações sobre endereço
 typedef struct {
@@ -8,7 +10,7 @@ typedef struct {
     char bairro[50];
     char cidade[50];
     char estado[3];  // Ex: "SP", "MG"
-} Endereco;
+}Endereco;
 
 // Informações do pacientes
 typedef struct {
@@ -16,10 +18,10 @@ typedef struct {
     char nomeCompleto[100];       // Nome completo
     char cpf[15];                 // CPF (formato: 000.000.000-00)
     
-    Endereco endereco; //Usando o endereço
-    char telefones[2][20];        // Até 32telefones
+    char endereco[200]; //Usando o endereço
+    char telefone[20];      
     char dataNascimento[11];      // Formato: DD/MM/AAAA
-    char historicoMedico[200];    // Ex: alergias, doenças crônicas
+    char historicoMedico[1000];    // Ex: alergias, doenças crônicas
 } Paciente;
 
 //Informações para Profissionais de saúde 
@@ -32,7 +34,6 @@ typedef struct {
     char telefones[2][20];        // Até 2 telefones
     char email[100];              // E-mail
 } Psaude;
-
 
 //Informações sobre os fornecedores 
 typedef struct {
