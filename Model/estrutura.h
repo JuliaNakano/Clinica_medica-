@@ -67,6 +67,12 @@ typedef struct {
     int quantidadeEstoque;         // Quantidade em estoque
     int estoqueMinimo;             // Estoque mínimo
 } MaterialMedicamento;
+/*Anotações de desenvolvimento
+Montar uma lista só com o código  e o nome dos fornecedores 
+e pedir pra escolherem..
+
+*/
+
 
 // Informações sobre os procedimentos medicos
 typedef struct {
@@ -77,6 +83,14 @@ typedef struct {
     char ambienteMedico[100];              // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
     char materiaisUtilizados[300];         // Medicamentos e materiais utilizados
 } Pmedico;
+
+/* Anotações de desenvolvimento 
+    // Na parte de procedimentos quero um menu com os ambientes medicos e seus respectivos codigos,
+    // Dai é só pedir para colocar o codigo do ambiente.
+    // em materiais tambem... 
+*/
+
+
 
 
 //Testando 

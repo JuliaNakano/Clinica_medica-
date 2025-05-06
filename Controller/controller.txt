@@ -5,3 +5,17 @@ Como exemplo temos funcionario com seu respectivo:
              - listagem 
              - delete
 
+ Explicando as funções :
+
+ Cadastro 
+
+
+ Atualização
+
+ Listar
+ 
+
+ Deletar:
+- A função de deletar foi pensanda sobre-escrevendo o dado na posição de memória que  deseja ser apagado, 
+Sendo assim a entidade é encontrada do ID, e a entidade subsequente é movida uma posição de momoria para tras
+
