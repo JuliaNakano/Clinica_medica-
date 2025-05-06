@@ -53,7 +53,7 @@ void cradastrarPaciente(Paciente* lista, int*qtd){
 //Atualizar de pacientes 
 void atualizarPaciente(Paciente* lista, int*qtd){
     int codigo;
-    printf("Digite o código do paciente que deseja atualizar: ");
+    printf("Digite o codigo do paciente que deseja atualizar: ");
     scanf("%d", &codigo);
     getchar(); // limpa o buffer do teclado
 
@@ -67,13 +67,13 @@ void atualizarPaciente(Paciente* lista, int*qtd){
     }
 
     if (!encontrado) {
-        printf("Paciente com código %d não encontrado.\n", codigo);
+        printf("Paciente com codigo %d nao encontrado.\n", codigo);
         return;
     }
 
     int opcao;
     do {
-        printf("\n=== Atualizar Paciente com o (Código %d) ===\n", codigo);
+        printf("\n=== Atualizar Paciente com o (Codigo %d) ===\n", codigo);
         printf("1. Nome Completo\n");
         printf("2. CPF\n");
         printf("3. Endereco\n");
@@ -174,9 +174,9 @@ void excluirPaciente(Paciente* lista, int* qtd, int codigo) {
             lista[j] = lista[j + 1];
         }
         (*qtd)--;
-        printf("O Paciente com código %d foi excluído com sucesso!\n", codigo);
+        printf("O Paciente com codigo %d foi excluído com sucesso!\n", codigo);
     } else {
-        printf("O Paciente com código %d não foi encontrado!\n", codigo);
+        printf("O Paciente com codigo %d nao foi encontrado!\n", codigo);
     }
 }
 void excluirPaciente(Paciente paciente[], int *qtd, int codigo)

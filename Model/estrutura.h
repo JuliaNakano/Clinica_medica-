@@ -61,7 +61,7 @@ typedef struct {
     int codigo;                     // Código único
     char descricao[100];           // Descrição
     char fabricante[100];          // Fabricante
-    Fornecedor * fornecedor;        // Fornecedor
+    int codigoFornecedor;       // Fornecedor...
     float precoCusto;              // Preço de custo
     float precoVenda;              // Preço de venda
     int quantidadeEstoque;         // Quantidade em estoque
