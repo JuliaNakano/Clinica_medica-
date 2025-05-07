@@ -52,6 +52,7 @@ typedef struct {
 //Ambientes medicos
 typedef struct {
     int codigo;                      // Código único
+    int nome;                        // Sala 14 
     char descricaoProcedimento[200]; //Descriçãodo procedimento
 } Amedico;
 
@@ -59,6 +60,7 @@ typedef struct {
 //Informações sobre os materiais e medicamentos 
 typedef struct {
     int codigo;                     // Código único
+    char nome [100];
     char descricao[100];           // Descrição
     char fabricante[100];          // Fabricante
     int codigoFornecedor;       // Fornecedor...
@@ -76,12 +78,15 @@ e pedir pra escolherem..
 
 // Informações sobre os procedimentos medicos
 typedef struct {
+
+    
     int codigo;                             // Código único
     char descricaoProcedimento[200];       // Descrição do procedimento
     float custo;                            // Custo do procedimento
     char tempoEstimado[30];                // Tempo estimado de realização (ex: "30 minutos")
-    char ambienteMedico[100];              // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
-    char materiaisUtilizados[300];         // Medicamentos e materiais utilizados
+    int codigoAmbienteMedico;              // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
+    int materiaisUtilizados [30]; // o valor desse int é um gambiarra desculpaaaa
+    int qtdMateriaisUtilizados ;         // Medicamentos e materiais utilizados
 } Pmedico;
 
 /* Anotações de desenvolvimento 

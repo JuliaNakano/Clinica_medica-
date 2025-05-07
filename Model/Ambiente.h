@@ -10,6 +10,7 @@
 
 // Funções do CRUD
 void cadastrarAmbiente(Amedico* lista, int* qtd);
+
 void listarAmbiente(Amedico* lista, int* qtd);
 void atualizarAmbienter(Amedico* lista, int* qtd);
 void excluirAmbiente(Amedico amedico[], int* quantidade, int codigo);
