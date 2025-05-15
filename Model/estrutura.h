@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 
+
 //Informações sobre endereço
 typedef struct {
     char rua[100];
@@ -52,15 +53,15 @@ typedef struct {
 //Ambientes medicos
 typedef struct {
     int codigo;                      // Código único
-    int nome;                        // Sala 14 
+    char nome [100];                        // ex: Sala 14 
     char descricaoProcedimento[200]; //Descriçãodo procedimento
 } Amedico;
-
+//Alterar na função para inserir  o nome.. não tava la antes :(.....
 
 //Informações sobre os materiais e medicamentos 
 typedef struct {
     int codigo;                     // Código único
-    char nome [100];
+    char nome [100];                // ex pinça retorcida
     char descricao[100];           // Descrição
     char fabricante[100];          // Fabricante
     int codigoFornecedor;       // Fornecedor...
@@ -72,8 +73,8 @@ typedef struct {
 /*Anotações de desenvolvimento
 Montar uma lista só com o código  e o nome dos fornecedores 
 e pedir pra escolherem..
-
 */
+//Alterar na função para inserir  o nome.. não tava la antes :(.....
 
 
 // Informações sobre os procedimentos medicos

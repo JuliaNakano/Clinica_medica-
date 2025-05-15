@@ -18,6 +18,10 @@ void cadastrarAmbiente(Amedico* lista, int* qtd) {
     printf("=== Cadastro de Ambiente Médico ===\n");
 
     lista[*qtd].codigo = *qtd + 1;
+    
+    printf("Nome do Ambiente: ");
+    fgets(lista[*qtd].nome, 100, stdin);
+    lista[*qtd].nome[strcspn(lista[*qtd].nome, "\n")] = '\0';
 
     printf("Descrição do Procedimento: ");
     fgets(lista[*qtd].descricaoProcedimento, 200, stdin);
@@ -45,9 +49,43 @@ void atualizarAmbiente(Amedico* lista, int qtd) {
         return;
     }
 
-    printf("Nova descrição do procedimento: ");
-    fgets(lista[i].descricaoProcedimento, 200, stdin);
-    lista[i].descricaoProcedimento[strcspn(lista[i].descricaoProcedimento, "\n")] = '\0';
+    int opcao;
+
+
+    do
+    {
+        //cria um menu para novo nome do ambinte e descrição do procedimento
+        intf("\nAtualizar o ambiente de  (Codigo %d)\n", codigo);
+        printf("1. ANome do Ambiente\n");
+        printf("2. Descrição do Procedimento\n");
+        printf("3. Sair\n");
+        printf("Opção: ");
+        scanf("%d", &opcao);
+        getchar(); // limpa o buffer
+        switch (opcao)
+        {
+            case 1:
+            printf("Novo Nome do Ambiente: ");  
+            fgets(lista[i].nome, 100, stdin);
+            lista[i].nome[strcspn(lista[i].nome, "\n")] = '\0';
+            break;
+            case 2:
+            printf("Nova Descrição do Procedimento: ");
+            fgets(lista[i].descricaoProcedimento, 200, stdin);
+            lista[i].descricaoProcedimento[strcspn(lista[i].descricaoProcedimento,"\n")] = '\0';
+            break;
+            case 3:
+            printf("Saindo da atualizacao...\n");
+            break;
+            default:
+            printf("Opção inválida. Tente novamente.\n");
+            break;
+            }
+
+
+
+    } while (opcao=0);
+    
 
     printf("Ambiente atualizado com sucesso.\n");
 }
@@ -90,5 +128,6 @@ void excluirAmbiente(Amedico* lista, int* qtd, int codigo) {
         printf("Ambiente com código %d não encontrado!\n", codigo);
     }
 }
+
 
 

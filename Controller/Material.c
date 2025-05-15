@@ -35,6 +35,10 @@ void cadastrarMaterial(MaterialMedicamento* lista, int* qtd, Fornecedor* fornece
     printf("=== Cadastro de Material/Medicamento ===\n");
 
     lista[*qtd].codigo = qtd+1;
+    
+    printf("Nome: ");
+    fgets(lista[*qtd].nome, 100, stdin);
+    lista[*qtd].nome[strcspn(lista[*qtd].nome, "\n")] = '\0';
 
     printf("Descrição: ");
     fgets(lista[*qtd].descricao, 100, stdin);
@@ -91,7 +95,7 @@ void atualizarMaterial(MaterialMedicamento* lista, int qtd, Fornecedor* forneced
     int opcao;
     do {
         printf("\nAtualizar Material/Medicamento (Codigo %d)\n", codigo);
-        printf("1. Codigo\n");
+        printf("1. Nome\n");
         printf("2. Descricao\n");
         printf("3. Fabricante\n");
         printf("4. Codigo do Fornecedor\n");
@@ -106,9 +110,9 @@ void atualizarMaterial(MaterialMedicamento* lista, int qtd, Fornecedor* forneced
 
         switch (opcao) {
             case 1:
-                printf("Novo codigo: ");
-                scanf("%d", &lista[i].codigo);
-                getchar();
+                printf("Novo nome: ");
+                fgets(lista[i].nome, 100, stdin);
+                lista[i].nome[strcspn(lista[i].descricao, "\n")] = '\0';
                 break;
             case 2:
                 printf("Nova descricao: ");

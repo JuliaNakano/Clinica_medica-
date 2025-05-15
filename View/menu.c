@@ -149,7 +149,7 @@ int main()
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
                 
-            case 7: 
+            case 0: 
             printf("OBRIGADO POR UTILIZAR O SISTEMA CLINICA MEDICA!!!");
             break;
             
@@ -161,8 +161,8 @@ int main()
     
     }
 
- 
-   
+    //Crie uma função para cada opção do mmenu
+    
     return 0;
 }
 

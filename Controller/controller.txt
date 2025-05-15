@@ -19,3 +19,4 @@ Como exemplo temos funcionario com seu respectivo:
 - A função de deletar foi pensanda sobre-escrevendo o dado na posição de memória que  deseja ser apagado, 
 Sendo assim a entidade é encontrada do ID, e a entidade subsequente é movida uma posição de momoria para tras
 
+Usar @param e @return para explicações sobre as funções 
