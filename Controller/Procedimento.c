@@ -159,7 +159,7 @@ void atualizarProcedimento(Pmedico* lista, int *qtd,Amedico* ambiente, int total
 
 
 //Listar procedimentos 
-void listarProcedimentos(Pmedico* lista, int qtd,int total, MaterialMedicamento* material ) {
+void listarProcedimento(Pmedico* lista, int qtd,int total, MaterialMedicamento* material ) {
     if (qtd == 0) {
         printf("Nenhum procedimento cadastrado.\n");
         return;

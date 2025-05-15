@@ -55,7 +55,7 @@ void atualizarAmbiente(Amedico* lista, int qtd) {
     do
     {
         //cria um menu para novo nome do ambinte e descrição do procedimento
-        intf("\nAtualizar o ambiente de  (Codigo %d)\n", codigo);
+        intf("\nAtualizar o ambiente de   (Codigo %d)\n", codigo);
         printf("1. ANome do Ambiente\n");
         printf("2. Descrição do Procedimento\n");
         printf("3. Sair\n");

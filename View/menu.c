@@ -1,13 +1,16 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include "../Model/estrutura.h"
+#include "../Model/Paciente.h"
+#include "../Model/Fornecedor.h"
+#include "../Model/Ambiente.h"
+#include "../Model/Material.h"
+#include "../Model/Procedimento.h"
+#include "../Model/ProfissionalSaude.h"
 
-int main()
-{
-   int opcao;
 
+//Este corresponde aos menus do sistema
+void menuPrincipal() {
     printf("Sistema Clinica Medica\n \n ");
-
-   
     printf("\n--------------------------------\n");
     printf("|             MENU                |\n");
     printf("---------------------------------\n");
@@ -18,151 +21,175 @@ int main()
     printf("---------------------------------\n");
     printf("| |3| Fornecedores               |\n ");
     printf("---------------------------------\n");
-    printf("| |4| Ambientes Medicos          |\n ");
+    printf("| |4| Ambientes Medicos          |\n");
     printf("---------------------------------\n");
     printf("| |5| Medicamentos e Materiais   |\n ");
     printf("---------------------------------\n");
     printf("| |6| Procedimentos Medicos      |\n");
     printf("---------------------------------\n");
     printf("---------------------------------\n");
-    printf("| |7| ENCERRAR                  |\n");
+    printf("| |0| ENCERRAR                  |\n");
     printf("---------------------------------\n");
-    
 
-
-    // 
-
-    while (opcao!=0){
-        switch (opcao)
-        {
-            case 1:
-            printf("--------- Pacientes ---------\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-            
-            //Escolhendo a opção para dar segmento no sistema 
-            
-
-                
-            case 2: 
-            printf("-- Proficionais da Saude-----\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-
-            case 3 :
-
-            printf("---------Fornecedores--------\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-
-            case 4: 
-            printf("------Ambientes Medicos------\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-            
-            case 5: 
-
-            printf("--Medicamentos e Materiais---\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-
-            case 6: 
-            printf("--- Procedimentos Medicos ---\n");
-            printf("-----------------------------\n");
-            printf("| |1| Cadastrar              |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |2| Atualizar              |\n");
-            printf("----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |3| Listar                 |\n");
-            printf("-----------------------------\n");
-            printf("-----------------------------\n");
-            printf("| |4| Deletar                |\n");
-            printf("-----------------------------\n");
-            printf("------------------------------\n");
-            printf("| |5| Mostrar MENU           |\n");
-            printf("------------------------------\n");
-                
-            case 0: 
-            printf("OBRIGADO POR UTILIZAR O SISTEMA CLINICA MEDICA!!!");
-            break;
-            
-        }
-
-       
-        
-    
-    
-    }
-
-    //Crie uma função para cada opção do mmenu
-    
-    return 0;
 }
+
+int menuAmbienteMedico(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarAmbiente(lista,qtd);
+        break;
+    case 2:
+        void atualizarAmbiente(lista,qtd);
+        break;
+    case 3:
+        void listarAmbientes(lista,qtd);
+        break;
+    case 4:
+        void excluirAmbiente(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }  
+return 0;
+}
+
+int menuFornecedor(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarFornecedor(lista,qtd);
+        break;
+    case 2:
+        void atualizarFornecedor(lista,qtd);
+        break;
+    case 3:
+        void listarFornecedor(lista,qtd);
+        break;
+    case 4:
+        void excluirFornecedor(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
+return 0;
+}
+
+int menuMaterialMedicamento(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarMaterial(lista,qtd);
+        break;
+    case 2:
+        void atualizarMaterial(lista,qtd);
+        break;
+    case 3:
+        void listarMaterial(lista,qtd);
+        break;
+    case 4:
+        void excluirMaterial(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
+return 0;
+}
+
+int menuPaciente(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarPaciente(lista,qtd);
+        break;
+    case 2:
+        void atualizarPaciente(lista,qtd);
+        break;
+    case 3:
+        void listarPaciente(lista,qtd);
+        break;
+    case 4:
+        void excluirPaciente(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
+return 0;
+}
+
+int menuProcedimentoMedico(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarProcedimento(lista,qtd);
+        break;
+    case 2:
+        void atualizarProcedimento(lista,qtd);
+        break;
+    case 3:
+        void listarProcedimento(lista,qtd);
+        break;
+    case 4:
+        void excluirProcedimento(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }   
+return 0;
+}
+
+int menuProfissionalSaude(int opcao){
+    
+    switch (opcao)
+    {
+    case 1: 
+        void cadastrarProfissional(lista,qtd);
+        break;
+    case 2:
+        void atualizarProfissional(lista,qtd);
+        break;
+    case 3:
+        void listarProfissional(lista,qtd);
+        break;
+    case 4:
+        void excluirProfissional(lista,qtd);
+        break;
+    case 5:
+       void menuPrincipal();
+        break;                  
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
+return 0;
+}
+
+
+
+
 

@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "../Model/estrutura.h"
-#include "Paciente.h"
+
 
 /*  
 // Informações do pacientes
 typedef struct {
-    int codigo;                    // Código único
+    int codigo;5                    // Código único
     char nomeCompleto[100];       // Nome completo
     char cpf[15];                 // CPF (formato: 000.000.000-00)
     

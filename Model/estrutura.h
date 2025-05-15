@@ -86,7 +86,7 @@ typedef struct {
     float custo;                            // Custo do procedimento
     char tempoEstimado[30];                // Tempo estimado de realização (ex: "30 minutos")
     int codigoAmbienteMedico;              // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
-    int materiaisUtilizados [30]; // o valor desse int é um gambiarra desculpaaaa
+    int materiaisUtilizados [30]; // o valor desse int é um gambiarra desculpaaaa (criar um ponteiro dentro da struct 
     int qtdMateriaisUtilizados ;         // Medicamentos e materiais utilizados
 } Pmedico;
 

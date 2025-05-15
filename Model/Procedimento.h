@@ -10,7 +10,7 @@
 // Funções do CRUD
 void cadastrarProcedimento(Pmedico* lista, int* qtd,int total, MaterialMedicamento* material);
 void listarProcedimento(Pmedico* lista, int* qtd);
-void atualizarPaciente(Pmedico* lista, int* qtd, int total, MaterialMedicamento* material);
+void atualizarProcedimento(Pmedico* lista, int* qtd, int total, MaterialMedicamento* material);
 
 void excluirProcedimento(Pmedico procedimento[], int* qtd, int codigo);
 
