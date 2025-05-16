@@ -1,8 +1,7 @@
 //CRUD de ambiente medico
 #include <stdio.h>
 #include <string.h>
-#include "../Model/estrutura.h"
-#include "Paciente.h"
+#include "../Model/Ambiente.h"
 
 
 /* 
@@ -55,7 +54,7 @@ void atualizarAmbiente(Amedico* lista, int qtd) {
     do
     {
         //cria um menu para novo nome do ambinte e descrição do procedimento
-        intf("\nAtualizar o ambiente de   (Codigo %d)\n", codigo);
+        printf("\nAtualizar o ambiente de   (Codigo %d)\n", codigo);
         printf("1. ANome do Ambiente\n");
         printf("2. Descrição do Procedimento\n");
         printf("3. Sair\n");
@@ -91,7 +90,7 @@ void atualizarAmbiente(Amedico* lista, int qtd) {
 }
 
 //Listar ambiente médico
-void listarAmbientes(Amedico* lista, int qtd) {
+void listarAmbiente(Amedico* lista, int qtd) {
     if (qtd == 0) {
         printf("Nenhum ambiente médico cadastrado.\n");
         return;
@@ -101,6 +100,7 @@ void listarAmbientes(Amedico* lista, int qtd) {
 
     for (int i = 0; i < qtd; i++) {
         printf("Código: %d\n", lista[i].codigo);
+        printf("Nome do Ambiente: %s\n", lista[i].nome);
         printf("Descrição do Procedimento: %s\n", lista[i].descricaoProcedimento);
         printf("------------------------------------------\n");
     }

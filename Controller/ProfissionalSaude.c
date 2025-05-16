@@ -1,7 +1,7 @@
 //CRUD de Profissionais da Saúde
 #include <stdio.h>
 #include <string.h>
-#include "../Model/estrutura.h"
+#include "../Model/ProfissionalSaude.h"
 
 /*
 //Informações para Profissionais de saúde 

@@ -1,8 +1,9 @@
 //Crud do Materiais e medicamentos
 #include <stdio.h>
 #include <string.h>
-#include "../Model/estrutura.h"
 #include "../Model/Fornecedor.h"
+#include "../Model/Material.h"
+
 
 
 /*

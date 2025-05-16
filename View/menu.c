@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "../Model/estrutura.h"
 #include "../Model/Paciente.h"
 #include "../Model/Fornecedor.h"
 #include "../Model/Ambiente.h"
@@ -7,6 +6,14 @@
 #include "../Model/Procedimento.h"
 #include "../Model/ProfissionalSaude.h"
 
+Amedico* listaAtendimento;
+Fornecedor* listaFornecedores;
+MaterialMedicamento* listaMaterial;
+Paciente* listaPaciente;
+Pmedico* listaProcedimento;
+Psaude* listaProficional;
+
+int* qtd;
 
 //Este corresponde aos menus do sistema
 void menuPrincipal() {
@@ -34,23 +41,23 @@ void menuPrincipal() {
 }
 
 int menuAmbienteMedico(int opcao){
-    
+
     switch (opcao)
     {
     case 1: 
-        void cadastrarAmbiente(lista,qtd);
+        cadastrarAmbiente(listaAtendimento,qtd);
         break;
     case 2:
-        void atualizarAmbiente(lista,qtd);
+        atualizarAmbiente(listaAtendimento,qtd);
         break;
     case 3:
-        void listarAmbientes(lista,qtd);
+        listarAmbiente(listaAtendimento,qtd);
         break;
-    case 4:
-        void excluirAmbiente(lista,qtd);
+    case 4: //medico* lista, int* qtd, int codigo
+        excluirAmbiente(listaAtendimento,qtd, 1);
         break;
     case 5:
-       void menuPrincipal();
+       menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");
@@ -64,19 +71,19 @@ int menuFornecedor(int opcao){
     switch (opcao)
     {
     case 1: 
-        void cadastrarFornecedor(lista,qtd);
+        cadastrarFornecedor(listaFornecedores,qtd);
         break;
     case 2:
-        void atualizarFornecedor(lista,qtd);
+        atualizarFornecedor(listaFornecedores,qtd);
         break;
     case 3:
-        void listarFornecedor(lista,qtd);
+        listarFornecedor(listaFornecedores,qtd);
         break;
     case 4:
-        void excluirFornecedor(lista,qtd);
+        excluirFornecedor(listaFornecedores,qtd,1);
         break;
     case 5:
-       void menuPrincipal();
+       menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");
@@ -90,19 +97,19 @@ int menuMaterialMedicamento(int opcao){
     switch (opcao)
     {
     case 1: 
-        void cadastrarMaterial(lista,qtd);
+        cadastrarMaterial(listaMaterial,qtd,listaFornecedores,1);
         break;
     case 2:
-        void atualizarMaterial(lista,qtd);
+        atualizarMaterial(listaMaterial,qtd,listaFornecedores,1);
         break;
     case 3:
-        void listarMaterial(lista,qtd);
+        listarMaterial(listaMaterial,qtd);
         break;
     case 4:
-        void excluirMaterial(lista,qtd);
+        excluirMaterial(listaMaterial,qtd,1);
         break;
     case 5:
-       void menuPrincipal();
+        menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");
@@ -116,19 +123,19 @@ int menuPaciente(int opcao){
     switch (opcao)
     {
     case 1: 
-        void cadastrarPaciente(lista,qtd);
+        cadastrarPaciente(listaPaciente,qtd);
         break;
     case 2:
-        void atualizarPaciente(lista,qtd);
+        atualizarPaciente(listaPaciente,qtd);
         break;
     case 3:
-        void listarPaciente(lista,qtd);
+        listarPaciente(listaPaciente,qtd);
         break;
     case 4:
-        void excluirPaciente(lista,qtd);
+        excluirPaciente(listaPaciente,qtd,1);
         break;
     case 5:
-       void menuPrincipal();
+        menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");
@@ -142,19 +149,19 @@ int menuProcedimentoMedico(int opcao){
     switch (opcao)
     {
     case 1: 
-        void cadastrarProcedimento(lista,qtd);
+        cadastrarProcedimento(listaProcedimento,qtd, listaAtendimento,1,listaMaterial);
         break;
     case 2:
-        void atualizarProcedimento(lista,qtd);
+        atualizarProcedimento(listaProcedimento,qtd, listaAtendimento, 1, listaMaterial);
         break;
     case 3:
-        void listarProcedimento(lista,qtd);
+        listarProcedimento(listaProcedimento,qtd);
         break;
     case 4:
-        void excluirProcedimento(lista,qtd);
+        excluirProcedimento(listaProcedimento,qtd, 1);
         break;
     case 5:
-       void menuPrincipal();
+        menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");
@@ -168,19 +175,19 @@ int menuProfissionalSaude(int opcao){
     switch (opcao)
     {
     case 1: 
-        void cadastrarProfissional(lista,qtd);
+        cadastrarProfissional(listaProficional,qtd);
         break;
     case 2:
-        void atualizarProfissional(lista,qtd);
+        atualizarProfissional(listaProficional,qtd);
         break;
     case 3:
-        void listarProfissional(lista,qtd);
+        listarProfissional(listaProficional,qtd);
         break;
     case 4:
-        void excluirProfissional(lista,qtd);
+        excluirProfissional(listaProficional,qtd,1);
         break;
     case 5:
-       void menuPrincipal();
+        menuPrincipal();
         break;                  
     default:
         printf("Opção inválida!\n");

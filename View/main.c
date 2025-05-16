@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "../Model/estrutura.h"
 #include "../Model/Paciente.h"
 #include "../Model/Fornecedor.h"
 #include "../Model/Ambiente.h"
@@ -35,6 +34,9 @@ int main()
     printf("---------------------------------\n");
     printf("| |0| ENCERRAR                  |\n");
     printf("---------------------------------\n");
+
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
     
 
 
@@ -60,6 +62,10 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+            //faltou receber a opção.........
+
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             
             int menuPaciente(int opcao);
             break;
@@ -84,6 +90,9 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             int menuProfissionalSaude(int opcao);
             break;
 
@@ -105,6 +114,8 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             int menuFornecedor(int opcao);
             break;
 
@@ -126,6 +137,8 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             int menuAmbienteMedico(int opcao);
             break;
             
@@ -147,6 +160,8 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             int menuMaterial(int opcao);
             break;
 
@@ -167,6 +182,8 @@ int main()
             printf("------------------------------\n");
             printf("| |5| Mostrar MENU           |\n");
             printf("------------------------------\n");
+            printf("Escolha uma opção: ");
+            scanf("%d", &opcao);
             int menuProcedimentoMedico(int opcao);
             break;
                 

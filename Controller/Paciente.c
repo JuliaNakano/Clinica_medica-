@@ -1,7 +1,9 @@
 //CRUD de paciente 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include "../Model/estrutura.h"
+#include "../Model/Paciente.h"
+
 
 
 /*  
@@ -59,7 +61,7 @@ void atualizarPaciente(Paciente* lista, int*qtd){
 
     //Procurando o id do paciente desejado, passando por todo o vetor
     int i, encontrado = 0;
-    for (i = 0; i < qtd; i++) {
+    for (i = 0; i < *qtd; i++) {
         if (lista[i].codigo == codigo) {
             encontrado = 1;
             break;
@@ -133,8 +135,6 @@ void atualizarPaciente(Paciente* lista, int*qtd){
 
 //Listar de pacientes 
 void listarPaciente(Paciente* lista, int* qtd) {
-    
-
     if (qtd == 0) {
         printf("Nenhum paciente cadastrado.\n");
         return;
@@ -143,7 +143,7 @@ void listarPaciente(Paciente* lista, int* qtd) {
     printf("\n");
     printf("\n=== Lista de Paciente ===\n");
 
-    for (int i = 0; i < qtd; i++) {
+    for (int i = 0; i < *qtd; i++) {
         printf("Paciente %s:\n",lista[i].nomeCompleto);
         printf("  Codigo: %d\n", lista[i].codigo);
         printf("  CPF: %s\n", lista[i].cpf);
@@ -178,7 +178,4 @@ void excluirPaciente(Paciente* lista, int* qtd, int codigo) {
     } else {
         printf("O Paciente com codigo %d nao foi encontrado!\n", codigo);
     }
-}
-void excluirPaciente(Paciente paciente[], int *qtd, int codigo)
-{
 }

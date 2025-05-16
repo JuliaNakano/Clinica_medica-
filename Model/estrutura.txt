@@ -5,13 +5,7 @@
 
 
 
-//Informações sobre endereço
-typedef struct {
-    char rua[100];
-    char bairro[50];
-    char cidade[50];
-    char estado[3];  // Ex: "SP", "MG"
-}Endereco;
+
 
 // Informações do pacientes
 typedef struct {
@@ -24,6 +18,7 @@ typedef struct {
     char dataNascimento[11];      // Formato: DD/MM/AAAA
     char historicoMedico[1000];    // Ex: alergias, doenças crônicas
 } Paciente;
+
 
 //Informações para Profissionais de saúde 
 typedef struct {
@@ -79,15 +74,13 @@ e pedir pra escolherem..
 
 // Informações sobre os procedimentos medicos
 typedef struct {
-
-    
     int codigo;                             // Código único
     char descricaoProcedimento[200];       // Descrição do procedimento
-    float custo;                            // Custo do procedimento
-    char tempoEstimado[30];                // Tempo estimado de realização (ex: "30 minutos")
-    int codigoAmbienteMedico;              // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
-    int materiaisUtilizados [30]; // o valor desse int é um gambiarra desculpaaaa (criar um ponteiro dentro da struct 
-    int qtdMateriaisUtilizados ;         // Medicamentos e materiais utilizados
+    float custo;                          // Custo do procedimento
+    char tempoEstimado[30];              // Tempo estimado de realização (ex: "30 minutos")
+    int codigoAmbienteMedico;           // Ambiente médico (ex: "Sala de cirurgia", "Ambulatório")
+    int materiaisUtilizados [30];      // o valor desse int é um gambiarra desculpaaaa (criar um ponteiro dentro da struct 
+    int qtdMateriaisUtilizados ;      // Medicamentos e materiais utilizados
 } Pmedico;
 
 /* Anotações de desenvolvimento 

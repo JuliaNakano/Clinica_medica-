@@ -1,7 +1,8 @@
 //Crud do funcionario 
 #include <stdio.h>
 #include <string.h>
-#include "../Model/estrutura.h"
+
+#include "../Model/Fornecedor.h"
 
 
 
@@ -88,7 +89,7 @@ void cadastrarFornecedor(Fornecedor* lista, int* qtd) {
 }
 
 //Função update fornecedor 
-void atualizarFornecedor(Fornecedor* lista, int qtd) {
+void atualizarFornecedor(Fornecedor* lista, int *qtd) {
     int codigo;
     printf("Digite o código do fornecedor que deseja atualizar: ");
     scanf("%d", &codigo);
@@ -96,7 +97,7 @@ void atualizarFornecedor(Fornecedor* lista, int qtd) {
 
     //Procurando o id do fornecedor desejado, passando por todo o vetor
     int i, encontrado = 0;
-    for (i = 0; i < qtd; i++) {
+    for (i = 0; i < *qtd; i++) {
         if (lista[i].codigo == codigo) {
             encontrado = 1;
             break;
@@ -175,7 +176,7 @@ void atualizarFornecedor(Fornecedor* lista, int qtd) {
 
 
 //Função de listar fornecedor 
-void listarFornecedores(Fornecedor* lista, int qtd) {
+void listarFornecedor(Fornecedor* lista, int *qtd) {
     if (qtd == 0) {
         printf("Nenhum fornecedor cadastrado.\n");
         return;
@@ -183,7 +184,7 @@ void listarFornecedores(Fornecedor* lista, int qtd) {
 
     printf("\n=== Lista de Fornecedores ===\n");
 
-    for (int i = 0; i < qtd; i++) {
+    for (int i = 0; i < *qtd; i++) {
         printf("Fornecedor %d:\n", i + 1);
         printf("  Codigo: %d\n", lista[i].codigo);
         printf("  Nome Fantasia: %s\n", lista[i].nomeFantasia);

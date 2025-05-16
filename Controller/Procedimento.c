@@ -1,12 +1,15 @@
 //Crud de Procedimentos Médicos
 #include <stdio.h>
 #include <string.h>
-#include "../Model/estrutura.h"
+#include "../Model/Procedimento.h"
 #include "../Model/Ambiente.h"
+#include "../Model/Material.h"
+
+
 
 
 //Lista de ambientes cadastrados só peo
-void listarAmbientes(Amedico* ambiente, int total) {
+void listarAmbiente(Amedico* ambiente, int total) {
     printf("\n=== Ambientes Cadastrados ===\n");
     for (int i = 0; i < total; i++) {
         printf("Codigo: %d - Nome: %s\n", ambiente[i].codigo, ambiente[i].nome);
@@ -82,7 +85,7 @@ void atualizarProcedimento(Pmedico* lista, int *qtd,Amedico* ambiente, int total
     getchar();
 
     int i, encontrado = 0;
-    for (i = 0; i < qtd; i++) {
+    for (i = 0; i < *qtd; i++) {
         if (lista[i].codigo == codigo) {
             encontrado = 1;
             break;
@@ -125,7 +128,7 @@ void atualizarProcedimento(Pmedico* lista, int *qtd,Amedico* ambiente, int total
                 break;
             case 4:
 
-                listarAmbientes(ambiente, total);
+                listarAmbiente(ambiente, total);
                 int codigoAmbienteMedico;
                 printf("Novo codigo do ambiente medico: ");
                 scanf("%d", &lista[i].codigoAmbienteMedico);
@@ -154,12 +157,11 @@ void atualizarProcedimento(Pmedico* lista, int *qtd,Amedico* ambiente, int total
                 printf("Opcao invalida.\n");
         }
     } while (opcao != 0);
-}
-
+}    
 
 
 //Listar procedimentos 
-void listarProcedimento(Pmedico* lista, int qtd,int total, MaterialMedicamento* material ) {
+void listarProcedimento(Pmedico* lista, int* qtd ) {
     if (qtd == 0) {
         printf("Nenhum procedimento cadastrado.\n");
         return;
@@ -167,7 +169,7 @@ void listarProcedimento(Pmedico* lista, int qtd,int total, MaterialMedicamento* 
 
     //Testar a parte de materiais....
     printf("\n=== Lista de Procedimentos Medicos ===\n");
-    for (int i = 0; i < qtd; i++) {
+    for (int i = 0; i < *qtd; i++) {
         printf("Codigo: %d\n", lista[i].codigo);
         printf("Descricao: %s\n", lista[i].descricaoProcedimento);
         printf("Custo: %.2f\n", lista[i].custo);
